@@ -23,7 +23,7 @@ Two AI slices with nodules to be used to demonstrate that code actually works ca
 The documentation below was created by using the prompt 
 > Write documentation for the following code
 
-[hsv_interface.py](/hsv_interface.py)
+### [hsv_interface.py](/hsv_interface.py)
 
 
 **Description**
@@ -32,22 +32,22 @@ This code is a Python script that uses the OpenCV library to track the yellow co
 
 Libraries used
 The following libraries are used in this code:
-‘’’
+```bash
 cv2: OpenCV library for computer vision and image processing.
 numpy: Numerical Python library for array manipulation and mathematical operations.
 pydicom: DICOM library for reading, modifying, and writing DICOM files.
-‘’’
+```
 
 **Main steps**
 
 Load an image in the DICOM format using the pydicom library.
-Create a named window using the ‘cv2.namedWindow’ function.
-Create trackbars for the minimum and maximum values of hue, saturation, and value in the HSV color format using the ‘cv2.createTrackbar’ function. The trackbars allow the user to adjust the HSV values.
+Create a named window using the `cv2.namedWindow` function.
+Create trackbars for the minimum and maximum values of hue, saturation, and value in the HSV color format using the `cv2.createTrackbar` function. The trackbars allow the user to adjust the HSV values.
 Set the default value for the maximum values of hue, saturation, and value.
-Continuously get the current positions of all trackbars using the ‘cv2.getTrackbarPos’ function.
-Convert the image to the HSV format using the cv2.cvtColor function.
-Perform color thresholding to extract the yellow color object by using the ‘cv2.inRange’ function and the ‘cv2.bitwise_and’ function.
-Display the result image in the named window using the cv2.imshow function. The result image is the yellow color object in the original image.
+Continuously get the current positions of all trackbars using the `cv2.getTrackbarPos` function.
+Convert the image to the HSV format using the `cv2.cvtColor` function.
+Perform color thresholding to extract the yellow color object by using the `cv2.inRange` function and the `cv2.bitwise_and` function.
+Display the result image in the named window using the `cv2.imshow` function. The result image is the yellow color object in the original image.
 Continuously display the result image until the user presses the 'q' key.
 Destroy all windows when the user presses the 'q' key.
 
@@ -56,9 +56,10 @@ Destroy all windows when the user presses the 'q' key.
 This code demonstrates how to use the OpenCV library to track the yellow color object in an image. The script is interactive, allowing the user to adjust the HSV values to extract the desired color object. The result image shows the yellow color object in the original image.
 
 
-[ocr_red_color.py](/ocr_red_color.py)
 
-The code performs OCR on DICOM slices to extract nodule ID information. It starts by importing necessary libraries including ‘pytesseract, cv2, numpy, os, pydicom, time, and warnings’. The path to the Tesseract OCR executable is then set.
+### [ocr_red_color.py](/ocr_red_color.py)
+
+The code performs OCR on DICOM slices to extract nodule ID information. It starts by importing necessary libraries including `pytesseract, cv2, numpy, os, pydicom, time, and warnings`. The path to the Tesseract OCR executable is then set.
 
 The code defines the path to the DICOM slices and the path to save the line with the nodule ID. If the path to save the line with the nodule ID does not exist, the code creates the folder.
 
