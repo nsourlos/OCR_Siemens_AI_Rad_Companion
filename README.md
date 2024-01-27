@@ -5,13 +5,12 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)]( https://github.com/nsourlos/ocr-siemens_ai_rad_companion)
 
 
 > This tool can be used to automatically identify the nodule id, as this is returned by the AI. Since AI returns a maximum of 10 nodules, possible values of that id are L01-L10. To optimize/fine-tune our OCR, we keep only characters that are of that value. 
 
-It should be noted that in the above implementation it was assumed that AI detects 10 nodules. This was because only one scan was available to us and we couldn’t fine-tune the OCR method for cases with less than 10 nodules. For such cases the above implementation might not actually work. The code to do the above can be found [here](/ocr_red_color.py)
+It should be noted that in the above implementation it was assumed that AI detects 10 nodules. This was because only one scan was available to us and we couldnï¿½t fine-tune the OCR method for cases with less than 10 nodules. For such cases the above implementation might not actually work. The code to do the above can be found [here](/ocr_red_color.py)
 
 
 In addition to the above, a tool is also provided which can be used to select a specific color/hue, like the red contours in an DICOM slice, or the yellow letters of the nodule id (which can be used to OCR them). Another application is to extract the contour of the nodule. This tool can be found [here](/hsv_interface.py)
@@ -75,7 +74,3 @@ Finally, the code displays the time elapsed for the entire process to complete.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
- 
-## License
-[MIT License](LICENSE)
